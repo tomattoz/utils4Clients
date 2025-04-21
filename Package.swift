@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "ClientUtils9", targets: ["ClientUtils9"]),
     ],
     dependencies: [
-        .package(path: "../utils"),
+        .package(url: "https://github.com/tomattoz/utils", branch: "master"),
     ],
     targets: [
         .target(name: "ClientUtils9",
