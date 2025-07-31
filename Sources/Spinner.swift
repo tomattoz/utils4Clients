@@ -2,19 +2,19 @@
 
 import SwiftUI
 
-struct Spinner: View {
+public struct Spinner: View {
     let color: Color
     @State private var rotationAngle = 0.0
     private let size: CGFloat
     private let colors: [Color]
     
-    init(color: Color = .blue, size: CGFloat = 80) {
+    public init(color: Color = .blue, size: CGFloat = 80) {
         self.size = size
         self.color = color
         self.colors = [color.opacity(0.3), color]
     }
 
-    var body: some View {
+    public var body: some View {
         ZStack {
             ZStack {
                 Circle()
