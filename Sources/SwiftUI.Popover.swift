@@ -2,6 +2,7 @@
 
 import SwiftUI
 
+#if os(macOS)
 public extension View {
     func popover<TContent: View>(show: Binding<Bool>,
                                  popover: NSPopover,
@@ -91,3 +92,4 @@ private struct PopoverWrapper<TContent: View>: NSViewRepresentable {
         }
     }
 }
+#endif

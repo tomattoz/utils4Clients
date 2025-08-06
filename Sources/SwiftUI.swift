@@ -17,6 +17,7 @@ public extension View {
         return self.frame(width: size.width, height: size.height)
     }
 
+    #if os(macOS)
     func cursor(_ cursor: NSCursor) -> some View {
         self.onHover { isHovered in
             DispatchQueue.main.async {
@@ -28,4 +29,5 @@ public extension View {
             }
         }
     }
+    #endif
 }

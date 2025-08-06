@@ -15,7 +15,11 @@ public extension View {
 public extension View {
     @ViewBuilder func buttonStyleAccessoryBarActionOrBordered() -> some View {
         if #available(macOS 14.0, *) {
+            #if os(macOS)
             self.buttonStyle(.accessoryBarAction)
+            #else
+            self.buttonStyle(.bordered)
+            #endif
         } else {
             self.buttonStyle(.bordered)
         }

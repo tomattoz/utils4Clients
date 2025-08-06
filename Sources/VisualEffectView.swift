@@ -1,5 +1,6 @@
 //  Created by Ivan Kh on 25.07.2023.
 
+#if os(macOS)
 import AppKit
 import SwiftUI
 
@@ -60,3 +61,4 @@ public extension VisualEffectView {
         }
     }
 }
+#endif

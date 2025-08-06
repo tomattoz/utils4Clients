@@ -2,6 +2,7 @@
 
 import SwiftUI
 
+#if os(macOS)
 public struct NSControlRepresentation: NSViewRepresentable {
     public init() {
     }
@@ -13,3 +14,4 @@ public struct NSControlRepresentation: NSViewRepresentable {
     public func updateNSView(_ nsView: NSControl, context: Context) {
     }
 }
+#endif
